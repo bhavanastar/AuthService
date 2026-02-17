@@ -45,6 +45,11 @@ public class UserController {
         return UserDTO.from(user);
     }
 
+    @GetMapping("/sample")
+    public void sampleAPI() {
+        System.out.println("Received a call from Prdct sevice");
+    }
+
     @PostMapping("/logout/{tokenValue}")
     public Boolean logout(@PathVariable String tokenValue) {
         return null;
